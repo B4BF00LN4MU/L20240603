@@ -7,10 +7,14 @@ FWildBoar::~FWildBoar()
 {
 }
 
-void FWildBoar::Attack()
-{
-}
-
 void FWildBoar::Move()
 {
+	FCharacter::Attack();
+	cout << "¸äµÅÁö";
+}
+
+void FWildBoar::Attack()
+{
+	FCharacter::Attack();
+	cout << "¸äµÅÁö";
 }

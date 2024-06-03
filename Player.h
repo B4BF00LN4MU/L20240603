@@ -9,8 +9,11 @@ public:
 	void Attack();
 	void Pickup();
 	void Attack();
+
 	void GetHP();
 	void SetHP();
+	void GetDie();
+	void SetDie();
 
 private:
 	int HP;

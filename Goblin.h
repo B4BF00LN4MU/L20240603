@@ -12,8 +12,7 @@ public:
 	FGoblin();
 	virtual ~FGoblin();
 
-	void Attack();
-
 	void Move();
+	void Attack();
 };
 

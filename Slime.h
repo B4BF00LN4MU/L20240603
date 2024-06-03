@@ -9,9 +9,7 @@ public:
 	FSlime();
 	virtual ~FSlime();
 
-	void Attack();
-
-
 	void Move();
+	void Attack();
 };
 

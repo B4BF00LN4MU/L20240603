@@ -11,8 +11,7 @@ public:
 	FWildBoar();
 	virtual ~FWildBoar();
 
-	void Attack();
-
 	void Move();
+	void Attack();
 };
 

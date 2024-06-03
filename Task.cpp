@@ -2,7 +2,6 @@
 #include <random>
 #include <vector>
 
-#include "Monster.h"
 #include "Player.h"
 #include "Goblin.h"
 #include "Slime.h"
@@ -15,40 +14,46 @@ int main()
 {
 	srand((unsigned)time(NULL));
 
-	vector<FGoblin*> MyGoblin;
-	vector<FSlime*> MySlime;
-	vector<FWildBoar*> MyWildBoar;
-	FPlayer* MyPlayer = new FPlayer();
+	FPlayer* Player = new FPlayer();
+	vector<FGoblin*> Goblin;
+	vector<FSlime*> Slime;
+	vector<FWildBoar*> WildBoar;
 
+	int Born = rand() % 3 + 1;
+
+	int GoblinCount = Born;
+	int SlimeCount = Born;
+	int WildBoarnCount = Born;
+
+	FGoblin* Goblins = new FGoblin[GoblinCount];
+	FSlime* Slimes = new FGoblin[SlimeCount];
+	FWildBoar* FildBoars = new FGoblin[WildBoarnCount];
+
+	
 	while (true)
 	{
-		int Born = rand()%3+1;
-		for (int i = 0; i < Born; ++i)
+		Player->Move();
+		for (int i = 0; i < GoblinCount; ++i)
 		{
-			MyGoblin.push_back(new FGoblin());
+			rand() % 2 == 0 ? Goblins[0].Move() : Goblins[0].Attack();
 		}
-		for (int i = 0; i < Born; ++i)
+		for (int i = 0; i < SlimeCount; ++i)
 		{
-			MySlime.push_back(new FSlime());
+			rand() % 2 == 0 ? Slimes[0].Move() : Slimes[0].Attack();
 		}
-		for (int i = 0; i < Born; ++i)
+		for (int i = 0; i < WildBoarnCount; ++i)
 		{
-			MyWildBoar.push_back(new FWildBoar());
-		}
-
-		MyGoblin[i]->Attack();
-
-		MyPlayer->Attack();
-
-		if(MyPlayer.HP<=0;)
-
-		for (int i = 0; i < MyGoblin.size(); ++i)
-		{
-			MyGoblin[i]->Move();
-			MyGoblin[i]->Attack();
+			rand() % 2 == 0 ? FildBoars[0].Move() : FildBoars[0].Attack();
 		}
 	}
 
+
+	while (true)
+	{
+
+	}
+
+	delete Player;
 
 	return 0;
 }
