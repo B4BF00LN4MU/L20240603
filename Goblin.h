@@ -1,9 +1,11 @@
 #pragma once
 #include "Monster.h"
 #include "HP.h"
+#include "Character.h"
 
 class FGoblin:
-	public FMonster,  FHP
+	public FCharacter
+
 {
 public:
 

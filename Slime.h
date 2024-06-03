@@ -1,8 +1,9 @@
 #pragma once
 #include "Monster.h"
 #include "HP.h"
+#include "Character.h"
 
-class FSlime : public FMonster, FHP
+class FSlime : public FCharacter
 {
 public:
 	FSlime();

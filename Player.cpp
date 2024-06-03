@@ -16,6 +16,14 @@ void FPlayer::Attack()
 {
 }
 
+void FPlayer::GetHP()
+{
+}
+
+void FPlayer::SetHP()
+{
+}
+
 void FPlayer::Pickup()
 {
 }
