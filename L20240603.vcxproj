@@ -133,7 +133,7 @@
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Slime.cpp" />
-    <ClCompile Include="Task.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="WildBoar.cpp" />
   </ItemGroup>
   <ItemGroup>

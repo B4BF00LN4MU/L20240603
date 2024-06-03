@@ -5,7 +5,7 @@ public:
 	FPlayer();
 	virtual ~FPlayer();
 
-	void Move();
+	virtual void Move() override;
 	void Attack();
 	void Pickup();
 	void Attack();
