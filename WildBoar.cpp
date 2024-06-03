@@ -1,4 +1,7 @@
 #include "WildBoar.h"
+#include <iostream>
+
+using namespace std;
 
 FWildBoar::FWildBoar()
 {
@@ -9,12 +12,12 @@ FWildBoar::~FWildBoar()
 
 void FWildBoar::Move()
 {
-	FCharacter::Attack();
 	cout << "¸äµÅÁö";
+	FCharacter::Move();
 }
 
 void FWildBoar::Attack()
 {
-	FCharacter::Attack();
 	cout << "¸äµÅÁö";
+	FCharacter::Attack();
 }

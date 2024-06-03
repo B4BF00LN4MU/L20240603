@@ -1,6 +1,8 @@
 #include "Player.h"
 #include <iostream>
 
+using namespace std;
+
 FPlayer::FPlayer()
 {
 }
@@ -11,34 +13,16 @@ FPlayer::~FPlayer()
 
 void FPlayer::Move()
 {
-	FCharacter::Move();
 	cout << "플레이어";
+
+	FCharacter::Move();
 }
 
 void FPlayer::Attack()
 {
-	FCharacter::Attack();
 	cout << "플레이어";
-}
 
-void FPlayer::GetHP()
-{
-}
-
-void FPlayer::SetHP()
-{
-}
-
-void FPlayer::GetDie()
-{
-}
-
-void FPlayer::SetDie()
-{
-}
-
-void FPlayer::Pickup()
-{
+	FCharacter::Attack();
 }
 
 void FPlayer::Die()

@@ -1,5 +1,7 @@
 #include "Goblin.h"
-#include "iostream"
+#include <iostream>
+
+using namespace std;
 
 FGoblin::FGoblin()
 {
@@ -11,12 +13,12 @@ FGoblin::~FGoblin()
 
 void FGoblin::Move()
 {
-	FCharacter::Attack();
 	cout << "고블린";
+	FCharacter::Move();
 }
 
 void FGoblin::Attack()
 {
-	FCharacter::Attack();
 	cout << "고블린";
+	FCharacter::Attack();
 }

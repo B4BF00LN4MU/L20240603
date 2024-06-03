@@ -1,5 +1,7 @@
 #pragma once
-class FPlayer
+#include "Character.h"
+
+class FPlayer : public FCharacter
 {
 public:
 	FPlayer();
@@ -7,17 +9,8 @@ public:
 
 	virtual void Move() override;
 	void Attack();
-	void Pickup();
-	void Attack();
-
-	void GetHP();
-	void SetHP();
-	void GetDie();
-	void SetDie();
 
 private:
-	int HP;
-
 	void Die();
 };
 

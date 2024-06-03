@@ -1,7 +1,11 @@
 #include "Character.h"
+#include <iostream>
+
+using namespace std;
 
 FCharacter::FCharacter()
 {
+	HP = 100;
 }
 
 FCharacter::~FCharacter()
@@ -20,4 +24,5 @@ void FCharacter::Attack()
 
 void FCharacter::SetHP(int NewHP)
 {
+	HP = NewHP;
 }

@@ -1,18 +1,13 @@
 #pragma once
-#include "Monster.h"
-#include "HP.h"
 #include "Character.h"
 
-class FGoblin:
-	public FCharacter
-
+class FGoblin : public FCharacter
 {
 public:
-
 	FGoblin();
 	virtual ~FGoblin();
 
-	void Move();
+	virtual void Move() override;
 	void Attack();
 };
 
