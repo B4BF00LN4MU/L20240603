@@ -9,6 +9,7 @@ public:
 
 	virtual void Move() override;
 	void Attack();
+	void PickUp();
 
 private:
 	void Die();

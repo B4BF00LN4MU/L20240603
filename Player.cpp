@@ -25,6 +25,10 @@ void FPlayer::Attack()
 	FCharacter::Attack();
 }
 
+void FPlayer::PickUp()
+{
+}
+
 void FPlayer::Die()
 {
 }

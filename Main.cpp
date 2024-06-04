@@ -9,17 +9,45 @@
 #include "Character.h"
 
 using namespace std;
+namespace 
+{
+
+	class Parent
+	{
+	public:
+		Parent()
+		{
+
+		}
+		virtual ~Parent();
+	};
+	class Child:
+}
+
+class child
+{
+
+};
+
+Parent::~Parent()
+{
+
+}
 
 int main()
 {
 	srand((unsigned)time(NULL));
+	
+	Parent* Person = new Child[4];
 
 	vector<FCharacter*> Characters;
 	Characters.push_back(new FPlayer());
-
-	int StageMonsterCount[10] = { 10,10,1,2,2,2,3,3,5,6 };
-	int Stage = 1;
-	for (int i = 0; i < StageMonsterCount[Stage]; ++i)
+	int StageMonsterCount[10] = {};
+	for (int i = 0; i < 10; ++i)
+	{
+		StageMonsterCount[i] = rand() % 10 + 1;
+	}
+	for (int i = 0; i <= StageMonsterCount[9]; ++i)
 	{
 		int Type = rand() % 3;
 		switch (Type)
@@ -36,13 +64,42 @@ int main()
 		}
 	}
 
-	while (true)
+	while(true)
 	{
-		for (auto Character : Characters)
+		for (int i = 0; i < Characters.size(); ++i)
 		{
-			Character->Move();
+			Characters[i]->Move();
+			FPlayer* Player = dynamic_cast<FPlayer*>(Characters[i]);
+				if (Player != nullptr)
+				{
+					Player->PickUp();
+				}
+				else
+				{
+					Characters[i]->Move();
+				}
+
 		}
+
+
+	//for(int i=0;i<10;++i)
+	//{
+	//	int key = rand() % 2;
+	//	if (key == 1)
+	//		for (auto Character : Characters)
+	//		{
+	//			Character->Move();
+	//		}
+	//	cout<<endl;
+	//	if (key == 0)
+	//		for (auto Character : Characters)
+	//		{
+	//			Character->Attack();
+	//		}
+	//	cout << endl;
 	}
+
+
 
 	for (auto Character : Characters)
 	{
